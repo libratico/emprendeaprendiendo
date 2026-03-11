@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Emprende Aprendiendo</title>
+    <meta name="description"
+        content="Lee nuestros últimos artículos sobre emprendimiento, marketing y negocios digitales.">
+    <!-- Enlaces a CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-styles.css">
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <!-- Icono de la página (Favicon) -->
+    <link rel="icon" type="image/png" href="imagen/icon2.ico">
+</head>
+
+<body>
+    <!-- Encabezado / Header (Mismo que index.html) -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="imagen/logo2.png" alt="Emprende Aprendiendo" class="logo-img">
+                <span class="logo-text">Emprende <span>Aprendiendo</span></span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html#inicio">Inicio</a>
+                <a href="index.html#sobre-nosotros">Sobre Nosotros</a>
+                <a href="index.html#productos">Productos</a>
+                <a href="blog.html" class="active">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header del Blog -->
+    <section class="blog-header-section">
+        <div class="container text-center">
+            <h1 class="section-title">Nuestro <span class="text-accent">Blog</span></h1>
+            <div class="title-underline center"></div>
+            <p class="section-subtitle">Consejos, estrategias y herramientas para escalar tu negocio en internet.</p>
+        </div>
+    </section>
+
+    <!-- Contenedor de Artículos -->
+    <section class="blog-content">
+        <div class="container">
+            <!-- Grid dinámico manejado por javascript -->
+            <div id="blog-grid" class="blog-grid">
+                <!-- Las tarjetas de los artículos se insertarán aquí -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Pie de página (Mismo que index.html) -->
+    <footer class="footer mt-auto">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-logo">Emprende <span>Aprendiendo</span></h3>
+                <p class="footer-desc">Construyendo el futuro de los negocios digitales.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Emprende Aprendiendo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script del Blog -->
+    <script src="blog-script.js"></script>
+</body>
+
+</html>
