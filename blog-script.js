@@ -23,6 +23,13 @@ const articulosBlog = [
         imagen: "imagen/silicona.jpg",
         fecha: "12 Marzo, 2026",
         link: "https://go.hotmart.com/H104733690V"
+    },
+    {
+        titulo: "Por que comprar este curso",
+        resumen: "Aprendes cómo ganar dinero como afiliado en Hotmart con estrategias claras, actualizadas y efectivas. En Rebeldes Digitales aprenderás paso a paso cómo iniciar en el mundo del marketing de afiliados sin necesidad de experiencia previa, y construir una fuente de ingresos online desde casa.",
+        imagen: "imagen/rebeldes digitales.jpg",
+        fecha: "15 Marzo, 2026",
+        link: "https://go.hotmart.com/R104912472K"
     }
 ];
 

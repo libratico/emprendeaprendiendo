@@ -23,6 +23,12 @@ const productosAfiliados = [
         descripcion: "¡Imagínate poder aprender a hacer todo tipo de moldes para velas, jabones, resina,porcelanicrón, yeso y venderlos por las redes sociales a miles de personas!",
         imagen: "imagen/silicona.jpg",
         link: "https://go.hotmart.com/H104733690V"
+    },
+    {
+        nombre: "Rebeldes Digitales - Gana Dinero como Afiliado",
+        descripcion: "Este curso está diseñado para personas que quieren emprender en internet, generar ingresos pasivos, y tener libertad financiera utilizando plataformas como Hotmart, redes sociales y herramientas gratuitas.",
+        imagen: "imagen/rebeldes digitales.jpg",
+        link: "https://go.hotmart.com/R104912472K"
     }
     
 ];
