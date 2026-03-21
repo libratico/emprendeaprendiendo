@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea tus propios Moldes en Silicón</title>
+    <meta name="description" content="Aprende a hacer todo tipo de moldes para velas, jabones, resina, yeso y más.">
+    <!-- Enlace al archivo CSS principal -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <!-- Icono de la página (Favicon) -->
+    <link rel="icon" type="image/png" href="imagen/icon2.ico">
+
+    <!-- CSS específico de esta Landing Page para ventas -->
+    <style>
+        .landing-header .nav-menu { display: none; }
+        .landing-header { justify-content: center; }
+
+        /* Hero Secion: Resina 2 Columnas */
+        .hero-landing {
+            background-color: var(--color-primary-dark);
+            padding: 80px 20px 100px;
+            color: var(--color-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-landing::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: linear-gradient(45deg, var(--color-primary), transparent);
+            border-radius: 50%;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        .hero-content-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            flex: 1.2;
+            text-align: left;
+        }
+
+        .hero-image-col {
+            flex: 1;
+            text-align: right;
+            perspective: 1000px;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 500px;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            border: 5px solid rgba(255,255,255,0.1);
+            transform: rotateY(-5deg) scale(1.02);
+            transition: transform 0.5s ease;
+        }
+        
+        .product-image:hover {
+            transform: rotateY(0deg) scale(1.05);
+        }
+
+        .hero-landing h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-landing .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.5;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: var(--color-text);
+            padding: 20px 45px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(255, 183, 3, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse-btn 2s infinite;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.02);
+            background-color: #ffd60a;
+            box-shadow: 0 15px 40px rgba(255, 183, 3, 0.6);
+        }
+
+        @keyframes pulse-btn {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .safe-checkout-text {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-top: 15px;
+            display: block;
+        }
+
+        .benefits-section {
+            padding: 80px 0;
+            background-color: var(--color-white);
+            position: relative;
+            z-index: 5;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .benefit-card {
+            background-color: var(--color-bg-light);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            border-left: 5px solid var(--color-primary);
+            box-shadow: var(--shadow-main);
+            transition: transform 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card h3 {
+            color: var(--color-primary-dark);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .guarantee-section {
+            padding: 80px 0;
+            background-color: var(--color-bg-light);
+            text-align: center;
+        }
+
+        .guarantee-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--color-white);
+            border: 2px dashed var(--color-primary);
+            padding: 50px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-main);
+        }
+
+        .guarantee-title {
+            color: var(--color-primary-dark);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        @media (max-width: 992px) {
+            .hero-content-wrapper { flex-direction: column; text-align: center; gap: 40px; }
+            .hero-text { text-align: center; }
+            .hero-image-col { text-align: center; }
+            .product-image { transform: none; }
+            .product-image:hover { transform: scale(1.02); }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Encabezado simplificado -->
+    <header class="header">
+        <div class="container header-container landing-header">
+            <a href="index.html" class="logo" title="Volver al inicio">
+                <img src="imagen/logo2.png" alt="Emprende Aprendiendo" class="logo-img">
+                <span class="logo-text">Emprende <span>Aprendiendo</span></span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Venta con 2 Columnas -->
+    <section class="hero-landing">
+        <div class="container">
+            <div class="hero-content-wrapper">
+                <div class="hero-text">
+                    <h1>Crea tus propios <span class="text-accent">Moldes en Silicón</span></h1>
+                    <p class="subtitle">¡Imagínate poder aprender a hacer todo tipo de moldes para velas, jabones, resina, porcelanicrón, yeso y venderlos a miles de personas en redes sociales!</p>
+                    
+                    <a href="https://go.hotmart.com/H104733690V" target="_blank" rel="noopener noreferrer" class="cta-button">
+                        ¡SÍ, QUIERO APRENDER HOY MISMO!
+                    </a>
+                    <span class="safe-checkout-text">🔒 Compra segura a través de Hotmart • Acceso Inmediato</span>
+                </div>
+
+                <div class="hero-image-col">
+                    <img src="imagen/silicona.jpg" alt="Curso de Moldes de Silicón" class="product-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios del Curso -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="section-title">¿Qué vas a encontrar aquí?</h2>
+                <div class="title-underline center"></div>
+                <p class="section-subtitle">Libera tu imaginación creando moldes exclusivos para cualquier proyecto.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>✅ Dominio del Silicón</h3>
+                    <p>Aprenderás las técnicas exactas desde cero para preparar la mezcla correcta de silicona y catalizador, evitando la formación de molestas burbujas.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>✅ Ahorra Dinero</h3>
+                    <p>¡Se acabaron los pagos altos por moldes prefabricados! Serás capaz de copiar y reproducir cualquier objeto a la perfección bajo demanda.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>✅ Negocio Muy Solicitado</h3>
+                    <p>Existe una gran demanda de artesanos que fabrican velas y jabones que necesitan moldes exclusivos. ¡Conviértete en su proveedor estrella!</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="https://go.hotmart.com/H104733690V" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:1.2rem; padding: 15px 40px; border-radius: var(--radius-lg);">
+                    Ver Precio y Temario Completo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Garantía -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-box">
+                <h2 class="guarantee-title">Garantía de Satisfacción Total</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">Tienes <strong>7 DÍAS</strong> de garantía incondicional respaldada.</p>
+                <p style="color: var(--color-text-muted); margin-bottom: 30px;">Prueba el contenido educativo por completo. Si consideras que lo que aprendes no es útil o aplicable, <span style="color: var(--color-primary); font-weight: bold;">Hotmart te devuelve el 100% de tu dinero</span> de forma súper rápida, a un solo clic y sin preguntas.</p>
+                
+                <p style="font-size: 1.1rem; font-weight: bold; color: var(--color-primary-dark); margin-bottom: 30px;">Empieza a rentabilizar tu conocimiento emprendiendo en alta demanda.</p>
+                
+                <a href="https://go.hotmart.com/H104733690V" target="_blank" rel="noopener noreferrer" class="cta-button" style="box-shadow: none; font-size: 1.1rem; animation: none;">
+                    EMPEZAR MI CURSO AHORA, SIN RIESGOS
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer minimalista -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" style="margin-bottom: 10px;">
+                <h3 class="footer-logo" style="margin-bottom:0;">Emprende <span>Aprendiendo</span></h3>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Emprende Aprendiendo. Este sitio no forma parte del sitio web de Facebook o Facebook Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

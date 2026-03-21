@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebeldes Digitales - Gana Dinero como Afiliado</title>
+    <meta name="description" content="Emprende en internet, genera ingresos pasivos y ten libertad financiera con Hotmart.">
+    <!-- Enlace al archivo CSS principal -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <!-- Icono de la página (Favicon) -->
+    <link rel="icon" type="image/png" href="imagen/icon2.ico">
+
+    <!-- CSS específico de esta Landing Page para ventas -->
+    <style>
+        .landing-header .nav-menu { display: none; }
+        .landing-header { justify-content: center; }
+
+        /* Hero Secion: Resina 2 Columnas */
+        .hero-landing {
+            background-color: var(--color-primary-dark);
+            padding: 80px 20px 100px;
+            color: var(--color-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-landing::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: linear-gradient(45deg, var(--color-primary), transparent);
+            border-radius: 50%;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        .hero-content-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            flex: 1.2;
+            text-align: left;
+        }
+
+        .hero-image-col {
+            flex: 1;
+            text-align: right;
+            perspective: 1000px;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 500px;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            border: 5px solid rgba(255,255,255,0.1);
+            transform: rotateY(-5deg) scale(1.02);
+            transition: transform 0.5s ease;
+        }
+        
+        .product-image:hover {
+            transform: rotateY(0deg) scale(1.05);
+        }
+
+        .hero-landing h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-landing .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.5;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: var(--color-text);
+            padding: 20px 45px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(255, 183, 3, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse-btn 2s infinite;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.02);
+            background-color: #ffd60a;
+            box-shadow: 0 15px 40px rgba(255, 183, 3, 0.6);
+        }
+
+        @keyframes pulse-btn {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .safe-checkout-text {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-top: 15px;
+            display: block;
+        }
+
+        .benefits-section {
+            padding: 80px 0;
+            background-color: var(--color-white);
+            position: relative;
+            z-index: 5;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .benefit-card {
+            background-color: var(--color-bg-light);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            border-left: 5px solid var(--color-primary);
+            box-shadow: var(--shadow-main);
+            transition: transform 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card h3 {
+            color: var(--color-primary-dark);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .guarantee-section {
+            padding: 80px 0;
+            background-color: var(--color-bg-light);
+            text-align: center;
+        }
+
+        .guarantee-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--color-white);
+            border: 2px dashed var(--color-primary);
+            padding: 50px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-main);
+        }
+
+        .guarantee-title {
+            color: var(--color-primary-dark);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        @media (max-width: 992px) {
+            .hero-content-wrapper { flex-direction: column; text-align: center; gap: 40px; }
+            .hero-text { text-align: center; }
+            .hero-image-col { text-align: center; }
+            .product-image { transform: none; }
+            .product-image:hover { transform: scale(1.02); }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Encabezado simplificado -->
+    <header class="header">
+        <div class="container header-container landing-header">
+            <a href="index.html" class="logo" title="Volver al inicio">
+                <img src="imagen/logo2.png" alt="Emprende Aprendiendo" class="logo-img">
+                <span class="logo-text">Emprende <span>Aprendiendo</span></span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Venta con 2 Columnas -->
+    <section class="hero-landing">
+        <div class="container">
+            <div class="hero-content-wrapper">
+                <div class="hero-text">
+                    <h1><span class="text-accent">Rebeldes Digitales</span><br>Gana Dinero como Afiliado</h1>
+                    <p class="subtitle">Este curso está diseñado para personas que quieren emprender en internet, generar ingresos pasivos y tener libertad financiera desde cualquier lugar con conexión a internet.</p>
+                    
+                    <a href="https://go.hotmart.com/R104912472K" target="_blank" rel="noopener noreferrer" class="cta-button">
+                        ¡SÍ, QUIERO UNIRME AL RETO HOY!
+                    </a>
+                    <span class="safe-checkout-text">🔒 Pago procesado de forma 100% segura por Hotmart</span>
+                </div>
+
+                <div class="hero-image-col">
+                    <img src="imagen/rebeldes digitales.jpg" alt="Rebeldes Digitales Marketing" class="product-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios del Curso -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="section-title">¿Qué aprenderás en Rebeldes Digitales?</h2>
+                <div class="title-underline center"></div>
+                <p class="section-subtitle">El paso a paso exacto para facturar en internet de manera recurrente.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>✅ Venta sin Producto Propio</h3>
+                    <p>Dominaras el Marketing de Afiliados. Te enseñaremos cómo seleccionar productos ganadores y llevarte la mayor tajada de comisión cada vez que vendes.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>✅ Estrategias Escalables</h3>
+                    <p>Aprenderás métodos probados tanto orgánicos (gratuitos) como de tráfico pago (anuncios) para atraer miles de personas a tus embudos de ventas cada mes.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>✅ Libertad Total</h3>
+                    <p>Construirás tu máquina de ventas que trabajará en piloto automático, ofreciéndote ese estilo de vida libre de horarios de oficina e ingresos limitados.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="https://go.hotmart.com/R104912472K" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:1.2rem; padding: 15px 40px; border-radius: var(--radius-lg);">
+                    Ver Programa Completo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Garantía -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-box">
+                <h2 class="guarantee-title">Tu Dinero Está Protegido 100%</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">Accede con total confianza gracias a nuestra garantía de <strong>7 DÍAS</strong>.</p>
+                <p style="color: var(--color-text-muted); margin-bottom: 30px;">Prueba el sistema completo. Si aplicas lo enseñado y sientes que no es lo tuyo, o simplemente no cumple tus expectativas, <span style="color: var(--color-primary); font-weight: bold;">Hotmart te reembolsa de inmediato y sin hacer preguntas.</span>.</p>
+                
+                <p style="font-size: 1.1rem; font-weight: bold; color: var(--color-primary-dark); margin-bottom: 30px;">Toma acción hoy mismo.</p>
+                
+                <a href="https://go.hotmart.com/R104912472K" target="_blank" rel="noopener noreferrer" class="cta-button" style="box-shadow: none; font-size: 1.1rem; animation: none;">
+                    QUIERO ENTRAR A REBELDES DIGITALES AHORA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer minimalista -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" style="margin-bottom: 10px;">
+                <h3 class="footer-logo" style="margin-bottom:0;">Emprende <span>Aprendiendo</span></h3>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Emprende Aprendiendo. No garantizamos resultados específicos que dependan del esfuerzo de cada estudiante. Este sitio no está asociado a Facebook, Meta o Hotmart.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

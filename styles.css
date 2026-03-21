@@ -124,6 +124,53 @@ body {
     color: var(--color-primary);
 }
 
+/* Menú Desplegable (Dropdown) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color-white);
+    min-width: 220px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: var(--radius-md);
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-content a {
+    color: var(--color-text);
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--color-bg-light);
+    color: var(--color-primary);
+    padding-left: 25px; /* Pequeño salto a la derecha al hacer hover */
+}
+
 /* Hero Section */
 .hero {
     position: relative;

@@ -10,25 +10,25 @@ const productosAfiliados = [
         nombre: "El Rentable Negosio De Bisutería Creativa",
         descripcion: "Lanza tu Marca de Bisutería y empieza a generar ingresos desde casa",
         imagen: "imagen/bisuteria.jpg",
-        link: "https://go.hotmart.com/Y104075980Y"
+        link: "bisuteria.html"
     },
     {
         nombre: "DISEÑA Y CREA CON RESINA",
         descripcion: "¡Imagínate poder aprender a elaborar todo tipo de accesorios con resina y generar un ingreso extra desde tu casa!",
         imagen: "imagen/recina.jpg",
-        link: "https://go.hotmart.com/G104092548I"
+        link: "resina.html"
     },
     {
         nombre: "Crea tu moldes en silicon",
         descripcion: "¡Imagínate poder aprender a hacer todo tipo de moldes para velas, jabones, resina,porcelanicrón, yeso y venderlos por las redes sociales a miles de personas!",
         imagen: "imagen/silicona.jpg",
-        link: "https://go.hotmart.com/H104733690V"
+        link: "moldes-silicon.html"
     },
     {
         nombre: "Rebeldes Digitales - Gana Dinero como Afiliado",
         descripcion: "Este curso está diseñado para personas que quieren emprender en internet, generar ingresos pasivos, y tener libertad financiera utilizando plataformas como Hotmart, redes sociales y herramientas gratuitas.",
         imagen: "imagen/rebeldes digitales.jpg",
-        link: "https://go.hotmart.com/R104912472K"
+        link: "rebeldes-digitales.html"
     }
     
 ];
